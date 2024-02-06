@@ -1,0 +1,19 @@
+#apt source mirrors
+#http://mirrors.aliyun.com/
+#http://mirrors.tuna.tsinghua.com/
+#http://mirrors.ustc.edu.cn/
+
+#16 xenial
+#18 bionic
+#20 focal
+#22 jammy
+
+deb http://mirrors.aliyun.com/ubuntu/ jammy  main restricted univese multiverse
+deb http://mirrors.aliyun.com/ubuntu/ jammy-security main restricted univese multiverse
+deb http://mirrors.aliyun.com/ubuntu/ jammy-updates main restricted univese multiverse
+deb http://mirrors.aliyun.com/ubuntu/ jammy-proposed main restricted univese multiverse
+deb-src http://mirrors.aliyun.com/ubuntu/ jammy  main restricted univese multiverse
+deb-src http://mirrors.aliyun.com/ubuntu/ jammy-security main restricted univese multiverse
+deb-src http://mirrors.aliyun.com/ubuntu/ jammy-updates main restricted univese multiverse
+deb-src http://mirrors.aliyun.com/ubuntu/ jammy-proposed main restricted univese multiverse 
+
