@@ -1,0 +1,7 @@
+import requests
+import datetime
+current_date = datetime.datetime.today()
+txtname=current_date.strftime("%Y%m%d")
+url=f"https://clashgithub.com/wp-content/uploads/rss/{txtname}.txt"
+res=requests.get(url)
+open(f"{txtname}.txt","wb").write(res.content)
