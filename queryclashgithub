@@ -1,7 +1,14 @@
 import requests
 import datetime
+from bs4 import BeautifulSoup  as BS
 current_date = datetime.datetime.today()
-txtname=current_date.strftime("%Y%m%d")
-url=f"https://clashgithub.com/wp-content/uploads/rss/{txtname}.txt"
+txtname=current_date.strftime("clashnode-%Y%m%d.html")
+url=f"https://clashgithub.com/{txtname}"
 res=requests.get(url)
-open(f"{txtname}.txt","wb").write(res.content)
+if res.status_code == 200:  
+    soup = BS(res.text, 'html.parser')
+    targetlist = soup.find('pre')
+    // the first line is incomplete
+    nodeinfo = 'vme' + targetlist.get_text(strip=True)    
+    open(f"node.txt","wb").write(nodeinfo.encode('utf-8'));
+
